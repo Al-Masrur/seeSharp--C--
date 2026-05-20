@@ -5,32 +5,29 @@ public class Person
 {
     public string name;
     public int id;
-    public int age;
 
-    public Person(string name, int id, int age)
+    public Person(string name, int id)
     {
         this.name = name;
         this.id = id;
-        this.age = age;
     }
 
     public void printInfo()
     {
-        Console.WriteLine($"Initial info:\nName: {name}, age:{age}, id: {id}\n");
+        Console.WriteLine($"Initial info:\nName: {name}, id: {id}\n");
     }
 }
 
 class Student : Person
 {
     public string gender;
-    public Student(string gender,int id,int age, string name) : base(name,id,age)
+    public Student(string gender,int id, string name) : base(name,id)
     {
         this.gender = gender;
     }
-
-    public void printInfo()
+    public new void printInfo()
     {
-        Console.WriteLine($"All info:\nname: {name}, age: {age}, id: {id}, gender: {gender}");
+        Console.WriteLine($"All info:\nname: {name}, id: {id}, gender: {gender}");
         
     }
 }
@@ -39,9 +36,19 @@ class Inheritance
 {
     static void Main(String[] args)
     {
-        Person p1 = new Person("Masrur",147,22);
+        Console.WriteLine($"Enter Your Name: ");
+        string name = Console.ReadLine() ?? "";
+
+        Console.WriteLine($"Enter Your ID: ");
+        int id =Convert.ToInt32(Console.ReadLine());
+
+        Person p1 = new Person(name,id);
         p1.printInfo();
-        Student s1 = new Student("Male",147,22,"Masrur");
+
+        Console.WriteLine($"Enter Your Gender: ");
+        string gender = Console.ReadLine() ?? "";
+
+        Student s1 = new Student(gender,id,name);
         s1.printInfo();
 
         
