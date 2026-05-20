@@ -113,7 +113,5 @@ class Encapsulation
         acc.Deposit(5000.50);
         acc.Withdraw(9000);
         acc.Withdraw(8000);
-        
-
     }
 }
