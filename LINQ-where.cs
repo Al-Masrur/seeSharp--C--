@@ -56,7 +56,6 @@ public class LINQWhere
             
         }
         
-        
         // var wordLength = word.Where(size=>size.Length>4);
         // Console.WriteLine($"words: {wordLength.Count()}");
 
@@ -64,7 +63,6 @@ public class LINQWhere
         // foreach(var w in wordLength)
         // {
         //     Console.Write($" {w}");
-            
         // }
     }
 }
